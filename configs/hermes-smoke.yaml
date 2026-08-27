@@ -15,7 +15,7 @@ agents:
       HERMES_LANGFUSE_SESSION_ID: "${HERMES_LANGFUSE_SESSION_ID}"
 
 tasks:
-  - path: tasks/task-a-1
+  - path: tasks/task-ep-5
 
 environment:
   type: docker
