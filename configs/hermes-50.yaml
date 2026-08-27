@@ -14,9 +14,57 @@ agents:
       HERMES_LANGFUSE_RELEASE: "${HERMES_LANGFUSE_RELEASE}"
       HERMES_LANGFUSE_SESSION_ID: "${HERMES_LANGFUSE_SESSION_ID}"
 
-datasets:
-  - path: tasks
-    n_tasks: 50
+tasks:
+  - path: tasks/task-ep-5
+  - path: tasks/task-ep-2
+  - path: tasks/task-ep-4
+  - path: tasks/task-c1
+  - path: tasks/task-a-40
+  - path: tasks/task-n-8
+  - path: tasks/task-n-6
+  - path: tasks/task-n-1
+  - path: tasks/task-n-7
+  - path: tasks/task-a-37
+  - path: tasks/task-alloc-6
+  - path: tasks/task-n-13
+  - path: tasks/task-n-14
+  - path: tasks/task-ops-1
+  - path: tasks/task-a-31
+  - path: tasks/task-a-36
+  - path: tasks/task-a-38
+  - path: tasks/task-n-15
+  - path: tasks/task-n-12
+  - path: tasks/task-grc-5
+  - path: tasks/task-grc-2
+  - path: tasks/task-iam-12
+  - path: tasks/task-b2
+  - path: tasks/task-b5
+  - path: tasks/task-iam-15
+  - path: tasks/task-ep-15
+  - path: tasks/task-ep-24
+  - path: tasks/task-ep-23
+  - path: tasks/task-iam-14
+  - path: tasks/task-b4
+  - path: tasks/task-b3
+  - path: tasks/task-iam-13
+  - path: tasks/task-grc-3
+  - path: tasks/task-grc-4
+  - path: tasks/task-ep-22
+  - path: tasks/task-a-5
+  - path: tasks/task-ep-25
+  - path: tasks/task-a-2
+  - path: tasks/task-ep-13
+  - path: tasks/task-ep-14
+  - path: tasks/task-c4
+  - path: tasks/task-c3
+  - path: tasks/task-ep-1
+  - path: tasks/task-ep-8
+  - path: tasks/task-c2
+  - path: tasks/task-c5
+  - path: tasks/task-ep-9
+  - path: tasks/task-ep-7
+  - path: tasks/task-n-2
+  - path: tasks/task-n-5
 
 environment:
   type: docker
