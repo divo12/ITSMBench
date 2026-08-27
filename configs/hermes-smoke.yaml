@@ -1,0 +1,21 @@
+job_name: itsm-hermes-smoke
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 1
+
+agents:
+  - name: agents.ofw_hermes:OfwHermes
+    model_name: openai/gpt-5.4-mini
+    env:
+      HERMES_LANGFUSE_PUBLIC_KEY: "${HERMES_LANGFUSE_PUBLIC_KEY}"
+      HERMES_LANGFUSE_SECRET_KEY: "${HERMES_LANGFUSE_SECRET_KEY}"
+      HERMES_LANGFUSE_BASE_URL: "${HERMES_LANGFUSE_BASE_URL}"
+      HERMES_LANGFUSE_ENV: itsm-bench
+      HERMES_LANGFUSE_RELEASE: "${HERMES_LANGFUSE_RELEASE}"
+      HERMES_LANGFUSE_SESSION_ID: "${HERMES_LANGFUSE_SESSION_ID}"
+
+tasks:
+  - path: tasks/task-a-1
+
+environment:
+  type: docker
