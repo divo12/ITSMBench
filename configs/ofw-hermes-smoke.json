@@ -1,0 +1,23 @@
+{
+  "job_name": "ofw-hermes-smoke",
+  "n_concurrent_trials": 1,
+  "agents": [
+    {
+      "name": "agents.ofw_hermes:OfwHermes",
+      "model_name": "openai/gpt-5.4-mini",
+      "env": {
+        "HERMES_LANGFUSE_PUBLIC_KEY": "${HERMES_LANGFUSE_PUBLIC_KEY}",
+        "HERMES_LANGFUSE_SECRET_KEY": "${HERMES_LANGFUSE_SECRET_KEY}",
+        "HERMES_LANGFUSE_BASE_URL": "${HERMES_LANGFUSE_BASE_URL}",
+        "HERMES_LANGFUSE_ENV": "itsm-bench",
+        "HERMES_LANGFUSE_RELEASE": "${HERMES_LANGFUSE_RELEASE}",
+        "HERMES_LANGFUSE_SESSION_ID": "${HERMES_LANGFUSE_SESSION_ID}"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "path": "tasks/task-iam-12"
+    }
+  ]
+}
