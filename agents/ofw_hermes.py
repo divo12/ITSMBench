@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import shlex
 import subprocess
 import tempfile
@@ -13,7 +14,9 @@ from harbor.agents.installed import hermes as harbor_hermes
 from harbor.agents.installed.hermes import Hermes
 from harbor.environments.base import BaseEnvironment
 
-HERMES_SOURCE = Path("/Users/divyansh/HermesHarness")
+HERMES_SOURCE = Path(
+    os.environ.get("OFW_HERMES_SOURCE", "/Users/divyansh/HermesHarness")
+).expanduser().resolve(strict=True)
 HERMES_REVISION = subprocess.run(
     ("git", "rev-parse", "HEAD"),
     cwd=HERMES_SOURCE,
