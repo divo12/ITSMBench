@@ -1,0 +1,86 @@
+job_name: astra-pi-cloud70
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 2
+retry:
+  max_retries: 1
+datasets:
+  - path: tasks
+    task_names:
+      - task-a-1
+      - task-a-2
+      - task-a-31
+      - task-a-32
+      - task-a-33
+      - task-a-36
+      - task-a-37
+      - task-a-38
+      - task-a-40
+      - task-a-5
+      - task-alloc-3
+      - task-alloc-5
+      - task-alloc-6
+      - task-b1
+      - task-b10
+      - task-b2
+      - task-b3
+      - task-b4
+      - task-b5
+      - task-b6
+      - task-b7
+      - task-b8
+      - task-b9
+      - task-c1
+      - task-c3
+      - task-c4
+      - task-c5
+      - task-ep-1
+      - task-ep-13
+      - task-ep-14
+      - task-ep-16
+      - task-ep-18
+      - task-ep-19
+      - task-ep-2
+      - task-ep-20
+      - task-ep-21
+      - task-ep-22
+      - task-ep-24
+      - task-ep-25
+      - task-ep-4
+      - task-ep-7
+      - task-ep-9
+      - task-grc-3
+      - task-grc-4
+      - task-grc-5
+      - task-grc-6
+      - task-grc-7
+      - task-grc-8
+      - task-iam-12
+      - task-iam-15
+      - task-iam-18
+      - task-iam-19
+      - task-n-1
+      - task-n-10
+      - task-n-11
+      - task-n-12
+      - task-n-13
+      - task-n-15
+      - task-n-2
+      - task-n-3
+      - task-n-4
+      - task-n-6
+      - task-n-7
+      - task-n-8
+      - task-net-1
+      - task-ops-1
+      - task-ops-2
+      - task-ops-3
+      - task-ops-4
+      - task-ops-5
+agents:
+  - name: pi
+    model_name: openai/gpt-6-astra
+    kwargs:
+      thinking: medium
+environment:
+  type: docker
